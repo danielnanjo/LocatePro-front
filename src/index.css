@@ -1,0 +1,223 @@
+/*
+ * This stylesheet provides custom global styles for the LocatePro website,
+ * designed to perfectly complement the `Home.jsx` component.
+ *
+ * It focuses on a cohesive light-themed, glassmorphic aesthetic by:
+ * - Defining a dynamic floating particle background.
+ * - Styling the `.glass-card` and `.kpi-card` classes with
+ * transparent, blurred backgrounds and subtle shadows.
+ * - Creating a consistent `.btn` class with premium gradient colors and hover effects.
+ * - Ensuring responsive behavior and cohesive styling for the hamburger menu
+ * on smaller screens.
+ */
+
+/* Import the Inter font for a clean, modern look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* Apply Tailwind base styles first */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --------------------
+ * Base & Utility Styles
+ * -------------------- */
+body {
+  font-family: 'Inter', sans-serif;
+  /* The background is handled by the Home.jsx component, so we don't
+     need a global background here. We'll just set a min-height. */
+  min-height: 100vh;
+}
+
+/* Print styles for receipts, kept for functionality */
+@media print {
+  body {
+    background: #fff !important;
+    color: #222 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  nav, header, footer, .no-print, .min-h-screen > *:not(.print-receipt-container) {
+    display: none !important;
+  }
+  .print-receipt-container {
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 0 !important;
+    background: #fff !important;
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+  .receipt-print {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    color: #222;
+    border: 2px solid #0ea5e9;
+    border-radius: 12px;
+    padding: 32px 32px 24px 32px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-shadow: 0 0 0 2px #0ea5e9, 0 2px 16px 0 rgba(0,0,0,0.1);
+  }
+}
+
+/* --------------------
+ * Floating Particles Background
+ * -------------------- */
+.particle-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  background: linear-gradient(90deg, #0057ff, #00eaff);
+  border-radius: 50%;
+  animation: float 20s ease-in-out infinite;
+  opacity: 0.2;
+}
+
+/* Alternate animation for variety */
+.particle:nth-child(2n) {
+  animation-duration: 25s;
+  animation-delay: 5s;
+  animation-direction: reverse;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-50vh) scale(1.2);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1);
+    opacity: 0.2;
+  }
+}
+
+/* --------------------
+ * Glassmorphic Cards & UI Elements
+ * -------------------- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.kpi-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* --------------------
+ * Button Styling
+ * -------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #0057ff, #00eaff);
+  color: #fff;
+  border: 2px solid transparent;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #00eaff, #0057ff);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 87, 255, 0.3);
+}
+
+/* --------------------
+ * Hamburger Menu & Responsive Nav
+ * -------------------- */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 24px;
+  background: #0057ff; /* Changed to match the primary blue */
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Responsive navbar styles */
+@media (max-width: 900px) {
+  .navbar-links {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    /* Use a light, transparent background consistent with the theme */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 40;
+    padding: 1rem 0;
+    animation: fadeInMenu 0.3s;
+  }
+  .navbar-links a {
+    color: #334155; /* Ensure links are readable on the light background */
+    padding: 0.5rem 1rem;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Modern fade-in animation for mobile menu */
+@keyframes fadeInMenu {
+  0% { opacity: 0; transform: translateY(-20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+/* Utility for hiding scrollbars on mobile nav */
+.navbar-links {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.navbar-links::-webkit-scrollbar {
+  display: none;
+}
