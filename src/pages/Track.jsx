@@ -16,7 +16,7 @@ const markerIcon = new L.Icon({
   popupAnchor: [0, -36],
 });
 
-const socket = io(import.meta.env.VITE_API_BASE || "http://localhost:5000");
+const socket = io(import.meta.env.VITE_API_BASE || "https://locatepro-back.onrender.com");
 
 // Emojis for icons as requested
 const emojiMap = {
