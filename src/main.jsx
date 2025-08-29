@@ -1,5 +1,4 @@
 import React from 'react';
-import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './index.css';
@@ -12,9 +11,11 @@ import Contact from './pages/Contact.jsx';
 import Payments from './pages/Payments.jsx';
 import AdminLogin from './pages/AdminLogin.jsx';
 import AdminDashboard from './pages/AdminDashboard.jsx';
+import TawkToChat from './components/TawkToChat.jsx'; // <-- add this
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <TawkToChat /> {/* <-- add this */}
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -35,19 +36,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </React.StrictMode>
 )
-
-export default function Home() {
-  useEffect(() => {
-    // Only add script if not already present
-    if (!window.Tawk_API) {
-      const s1 = document.createElement("script");
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/68a924307d18e21931dd2518/1j3abao74';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      document.body.appendChild(s1);
-    }
-  }, []);
-
-  // ...existing code...
-}
