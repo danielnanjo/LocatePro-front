@@ -2,8 +2,7 @@ import React from 'react';
 import Nav from '../components/Nav.jsx';
 import { motion } from 'framer-motion';
 import { FaCreditCard, FaPaypal, FaBuildingColumns } from 'react-icons/fa6';
-import { SiVenmo, SiCashapp, SiApplepay, SiChime, SiZelle } from 'react-icons/si';
-import { FaGiftcard } from 'react-icons/fa';
+import { FaCreditCard, FaPaypal, FaBuildingColumns, FaMoneyCheckDollar, FaGiftcard } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
 const cardVariants = {
@@ -17,7 +16,7 @@ const paymentMethods = [
     description: 'Pay securely via Visa, Mastercard, Amex, and major wallets. Fast, encrypted, and convenient for all clients.',
     icon: <FaCreditCard className="text-3xl text-blue-700" />,
   },
-  {
+   {
     title: 'Venmo',
     description: 'Send money instantly with your Venmo account. Simply scan our QR code or use our Venmo handle.',
     icon: <SiVenmo className="text-3xl text-blue-700" />,
@@ -40,7 +39,7 @@ const paymentMethods = [
   {
     title: 'Chime',
     description: 'Send and receive money with your Chime account. Transfer funds to our account for a quick and seamless transaction.',
-    icon: <SiChime className="text-3xl text-blue-700" />,
+    icon: <FaMoneyCheckDollar className="text-3xl text-blue-700" />,
   },
   {
     title: 'Gift Card',
