@@ -511,7 +511,7 @@ export default function Home() {
 
       {/* Copyright Notice */}
       <div className="mt-8 pt-6 border-t border-slate-700 text-center text-slate-500 text-sm">
-        &copy; {new Date().getFullYear()} YourBrand. All Rights Reserved.
+        &copy; 2013 YourBrand. All Rights Reserved.
       </div>
     </footer>
     </div>
