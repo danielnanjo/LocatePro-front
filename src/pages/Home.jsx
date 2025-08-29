@@ -447,15 +447,72 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 max-w-7xl mx-auto px-4 py-10 text-gray-500 text-center">
-        <div className="mb-2 flex justify-center gap-4">
-          <img src="https://i.pinimg.com/736x/49/e6/52/49e65204f855f1c5e85149473e19ea1c.jpg" alt="Secure" className="h-6" />
-          <span>Secure & Encrypted</span>
-          <img src="https://i.pinimg.com/1200x/09/8e/92/098e92110a2160252f007de814230828.jpg" alt="Support" className="h-6" />
-          <span>24/7 Support</span>
+      <footer className="bg-slate-900 text-white p-8 md:p-12 lg:p-16 rounded-t-3xl shadow-xl border-t-2 border-slate-700">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-8">
+        
+        {/* Company Info / Logo */}
+        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <a href="#" className="text-3xl font-bold tracking-tight text-teal-400 hover:text-teal-300 transition-colors duration-300">
+            YourBrand
+          </a>
+          <p className="mt-2 text-sm text-slate-400 max-w-sm">
+            Crafting beautiful and functional digital experiences.
+          </p>
+          
+          {/* New secure/support section */}
+          <div className="mt-4 flex flex-col sm:flex-row items-center gap-4 text-sm text-slate-400">
+            <div className="flex items-center gap-2">
+              <img src="https://placehold.co/24x24/10b981/ffffff?text=Secure" alt="Secure & Encrypted" className="h-6 w-6 rounded-full" />
+              <span>Secure & Encrypted</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <img src="https://placehold.co/24x24/10b981/ffffff?text=Support" alt="24/7 Support" className="h-6 w-6 rounded-full" />
+              <span>24/7 Support</span>
+            </div>
+          </div>
         </div>
-        © {new Date().getFullYear()} LocatePro Logistics  All rights reserved.
-      </footer>
+
+        {/* Navigation Links */}
+        <div className="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-4">
+          <a href="#" className="text-slate-300 hover:text-white transition-colors duration-300">
+            About
+          </a>
+          <a href="#" className="text-slate-300 hover:text-white transition-colors duration-300">
+            Services
+          </a>
+          <a href="#" className="text-slate-300 hover:text-white transition-colors duration-300">
+            Blog
+          </a>
+          <a href="#" className="text-slate-300 hover:text-white transition-colors duration-300">
+            Contact
+          </a>
+          <a href="#" className="text-slate-300 hover:text-white transition-colors duration-300">
+            Privacy Policy
+          </a>
+        </div>
+        
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-end">
+          <button
+            onClick={() => console.log('Get a Quote button clicked!')}
+            className="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300"
+          >
+            Get a Quote
+          </button>
+          <button
+            onClick={() => console.log('Learn More button clicked!')}
+            className="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300"
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+
+      {/* Copyright Notice */}
+      <div className="mt-8 pt-6 border-t border-slate-700 text-center text-slate-500 text-sm">
+        &copy; {new Date().getFullYear()} YourBrand. All Rights Reserved.
+      </div>
+    </footer>
     </div>
   )
 }
