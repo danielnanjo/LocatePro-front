@@ -30,14 +30,12 @@ export default function Nav() {
           onClick={() => setOpen(false)}
         >
           {/* A simple SVG logo for consistent, fast rendering. */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="h-8 w-8 text-[#00eaff]"
-          >
-            <path d="M12.972 2.164a1 1 0 0 0-1.944 0l-4.5 9a1 1 0 0 0-.063.14l-4.25 9.176a1 1 0 0 0 .907 1.49l18.5 0.024a1 1 0 0 0 .907-1.49l-4.25-9.176a1 1 0 0 0-.063-.14l-4.5-9ZM12 4.416 15.65 11.83 17.65 16h-3.3l-2.35-4.7L12 4.416Zm-1 0-1.65 3.3-2.35 4.7-3.3 0 2-4.17L11 4.416Zm4.3 11.584 1.35-3.08 2.5-5.38 2.1-1.07-1.85 4.02-3.1 6.51h-1Zm-10.6 0h-1l-1.9-4.02 1.9-4.02 1.35 3.08 3.1 6.51Z" />
-          </svg>
+           {/* The new logo image, replacing the SVG code. */}
+        <img
+          src="https://i.pinimg.com/736x/2d/d8/ca/2dd8ca4f2d23619e6bcfd845e207d16b.jpg"
+          alt="LocatePro Logo"
+          className="h-8 w-8" // This ensures the image has a fixed size.
+        />
           <span className="tracking-wide text-gray-800">LocatePro</span>
         </Link>
 
