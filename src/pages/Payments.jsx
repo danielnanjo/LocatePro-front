@@ -1,8 +1,8 @@
 import React from 'react';
 import Nav from '../components/Nav.jsx';
 import { motion } from 'framer-motion';
-import { FaCreditCard, FaPaypal, FaBuildingColumns } from 'react-icons/fa6';
 import { FaCreditCard, FaPaypal, FaBuildingColumns, FaMoneyCheckDollar, FaGiftcard } from 'react-icons/fa6';
+import { SiVenmo, SiCashapp, SiApplepay, SiZelle } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 
 const cardVariants = {
