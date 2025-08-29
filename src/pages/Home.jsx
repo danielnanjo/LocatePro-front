@@ -462,11 +462,11 @@ export default function Home() {
           {/* New secure/support section */}
           <div className="mt-4 flex flex-col sm:flex-row items-center gap-4 text-sm text-slate-400">
             <div className="flex items-center gap-2">
-              <img src="https://placehold.co/24x24/10b981/ffffff?text=Secure" alt="Secure & Encrypted" className="h-6 w-6 rounded-full" />
+              <img src="https://i.pinimg.com/736x/49/e6/52/49e65204f855f1c5e85149473e19ea1c.jpg" alt="Secure & Encrypted" className="h-6 w-6 rounded-full" />
               <span>Secure & Encrypted</span>
             </div>
             <div className="flex items-center gap-2">
-              <img src="https://placehold.co/24x24/10b981/ffffff?text=Support" alt="24/7 Support" className="h-6 w-6 rounded-full" />
+              <img src="https://i.pinimg.com/1200x/09/8e/92/098e92110a2160252f007de814230828.jpg" alt="24/7 Support" className="h-6 w-6 rounded-full" />
               <span>24/7 Support</span>
             </div>
           </div>
