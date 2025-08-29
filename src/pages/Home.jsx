@@ -474,16 +474,16 @@ export default function Home() {
 
         {/* Navigation Links */}
         <div className="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-4">
-          <a href="#" className="text-slate-300 hover:text-white transition-colors duration-300">
+          <a href="./About.jsx" className="text-slate-300 hover:text-white transition-colors duration-300">
             About
           </a>
-          <a href="#" className="text-slate-300 hover:text-white transition-colors duration-300">
+          <a href="./Services.jsx" className="text-slate-300 hover:text-white transition-colors duration-300">
             Services
           </a>
-          <a href="#" className="text-slate-300 hover:text-white transition-colors duration-300">
+          <a href="./Blog.jsx" className="text-slate-300 hover:text-white transition-colors duration-300">
             Blog
           </a>
-          <a href="#" className="text-slate-300 hover:text-white transition-colors duration-300">
+          <a href="/contact" className="text-slate-300 hover:text-white transition-colors duration-300">
             Contact
           </a>
           <a href="#" className="text-slate-300 hover:text-white transition-colors duration-300">
@@ -500,6 +500,7 @@ export default function Home() {
             Get a Quote
           </button>
           <button
+            to = " /Contact.jsx"
             onClick={() => console.log('Learn More button clicked!')}
             className="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300"
           >
