@@ -25,19 +25,31 @@ export default function Nav() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo and site title, styled for a premium look. */}
         <Link
-          to="/"
-          className="flex items-center gap-2 font-bold text-gray-800 transition-transform duration-300 hover:scale-105"
-          onClick={() => setOpen(false)}
-        >
-          {/* A simple SVG logo for consistent, fast rendering. */}
-           {/* The new logo image, replacing the SVG code. */}
-        <img
-          src="https://i.pinimg.com/736x/2d/d8/ca/2dd8ca4f2d23619e6bcfd845e207d16b.jpg"
-          alt="LocatePro Logo"
-          className="h-8 w-8" // This ensures the image has a fixed size.
-        />
-          <span className="tracking-wide text-gray-800">LocatePro</span>
-        </Link>
+  to="/"
+  className="flex items-center gap-3 font-bold transition-transform duration-300 hover:scale-105"
+  onClick={() => setOpen(false)}
+>
+  {/* Modern and clean logo design */}
+  <div className="relative h-10 w-10 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 p-1 shadow-md">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="white"
+      className="h-6 w-6"
+    >
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+    </svg>
+  </div>
+  {/* Company name with clear typography */}
+  <div className="flex flex-col items-start leading-none">
+    <span className="text-xl font-extrabold text-gray-800">
+      Locate Pro
+    </span>
+    <span className="text-sm font-semibold text-gray-600">
+      Logistics
+    </span>
+  </div>
+</Link>
 
         {/* Hamburger button for mobile, with animated lines. */}
         <button
