@@ -333,16 +333,72 @@ export default function Track() {
         )}
 
         {/* Empty state */}
-        {!shipment && !loading && !error && (
-          <div className="text-center text-gray-400 py-24 opacity-70 animate-pulse">
-            <img
-                src="https://i.pinimg.com/1200x/39/2a/26/392a261b73dbcd361a0dac2e93a05284.jpg"
-                alt="Empty State"
-                className="h-20 w-20 mx-auto mb-4"
-              />
-            <p className="text-xl">Your journey to a better logistics experience begins here.</p>
-          </div>
-        )}
+{!shipment && !loading && !error && (
+  <>
+    <div className="text-center text-gray-400 py-24 opacity-70 animate-pulse">
+      <img
+        src="https://i.pinimg.com/1200x/39/2a/26/392a261b73dbcd361a0dac2e93a05284.jpg"
+        alt="Empty State"
+        className="h-20 w-20 mx-auto mb-4"
+      />
+      <p className="text-xl mb-8">Your journey to a better logistics experience begins here.</p>
+    </div>
+    {/* Contact Form */}
+    <div className="max-w-xl mx-auto mb-16">
+      <form
+        className="glass-card p-8 space-y-6 shadow-xl"
+        onSubmit={e => {
+          e.preventDefault();
+          // TODO: handle form submission (API, email, etc.)
+          alert("Thank you for contacting us! We'll get back to you soon.");
+        }}
+      >
+        <h2 className="text-2xl font-bold text-blue-600 mb-4 text-center">Contact Us</h2>
+        <div>
+          <label className="block text-gray-700 font-semibold mb-1">Full Name</label>
+          <input
+            type="text"
+            className="w-full px-4 py-3 rounded-xl bg-gray-100 border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+            placeholder="Your Name"
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-gray-700 font-semibold mb-1">Email Address</label>
+          <input
+            type="email"
+            className="w-full px-4 py-3 rounded-xl bg-gray-100 border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+            placeholder="you@email.com"
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-gray-700 font-semibold mb-1">Phone Number</label>
+          <input
+            type="tel"
+            className="w-full px-4 py-3 rounded-xl bg-gray-100 border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+            placeholder="(optional)"
+          />
+        </div>
+        <div>
+          <label className="block text-gray-700 font-semibold mb-1">Message</label>
+          <textarea
+            className="w-full px-4 py-3 rounded-xl bg-gray-100 border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+            placeholder="Type your message here..."
+            rows={4}
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          className="btn w-full px-5 py-3 text-lg"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
+  </>
+)}
 
         {/* Results */}
         {shipment && (
