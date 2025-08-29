@@ -474,21 +474,21 @@ export default function Home() {
 
         {/* Navigation Links */}
         <div className="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-4">
-          <a href="/about" className="text-slate-300 hover:text-white transition-colors duration-300">
-            About
-          </a>
-          <a href="./Services.jsx" className="text-slate-300 hover:text-white transition-colors duration-300">
-            Services
-          </a>
-          <a href="./Blog.jsx" className="text-slate-300 hover:text-white transition-colors duration-300">
-            Blog
-          </a>
-          <a href="/contact" className="text-slate-300 hover:text-white transition-colors duration-300">
-            Contact
-          </a>
-          <a href="#" className="text-slate-300 hover:text-white transition-colors duration-300">
-            Privacy Policy
-          </a>
+          <Link to="/about" className="text-slate-300 hover:text-white transition-colors duration-300">
+              About
+            </Link>
+            <Link to="/services" className="text-slate-300 hover:text-white transition-colors duration-300">
+              Services
+            </Link>
+            <Link to="/blog" className="text-slate-300 hover:text-white transition-colors duration-300">
+              Blog
+            </Link>
+            <Link to="/contact" className="text-slate-300 hover:text-white transition-colors duration-300">
+              Contact
+            </Link>
+            <a href="#" className="text-slate-300 hover:text-white transition-colors duration-300">
+              Privacy Policy
+            </a>
         </div>
         
         {/* Action Buttons */}
