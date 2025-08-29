@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from '../components/Nav.jsx';
 import { motion } from 'framer-motion';
-import { FaCreditCard, FaPaypal, FaBuildingColumns, FaMoneyCheckDollar, FaGiftcard } from 'react-icons/fa6';
+import { FaCreditCard, FaPaypal, FaBuildingColumns, FaMoneyCheckDollar} from 'react-icons/fa6';
 import { SiVenmo, SiCashapp, SiApplepay, SiZelle } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 
@@ -41,11 +41,12 @@ const paymentMethods = [
     description: 'Send and receive money with your Chime account. Transfer funds to our account for a quick and seamless transaction.',
     icon: <FaMoneyCheckDollar className="text-3xl text-blue-700" />,
   },
-  {
-    title: 'Gift Card',
-    description: 'Redeem gift cards or e-gift cards for payment. Simply enter your gift card details during checkout.',
-    icon: <FaGiftcard className="text-3xl text-blue-700" />,
-  },
+  // Replace FaGiftcard with FaMoneyCheckDollar or another suitable icon
+{
+  title: 'Gift Card',
+  description: 'Redeem gift cards or e-gift cards for payment. Simply enter your gift card details during checkout.',
+  icon: <FaMoneyCheckDollar className="text-3xl text-blue-700" />,
+},
   {
     title: 'Bank Transfer',
     description: 'For corporate and high-value transactions, direct bank transfer ensures traceability and compliance. Bank details provided on request.',
