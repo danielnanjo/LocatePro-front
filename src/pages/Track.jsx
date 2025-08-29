@@ -328,6 +328,51 @@ export default function Track() {
           </form>
         </div>
 
+         {/* Contact Form */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="glass-card bg-white/70 backdrop-blur-md p-8 shadow-xl"
+                  >
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Send Us a Message</h2>
+                    <form className="space-y-4">
+                      <div>
+                        <label className="block text-gray-700 font-semibold mb-1">Your Name</label>
+                        <input
+                          type="text"
+                          className="w-full px-4 py-3 rounded-xl bg-gray-100 border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                          placeholder="Full Name"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-gray-700 font-semibold mb-1">Your Email</label>
+                        <input
+                          type="email"
+                          className="w-full px-4 py-3 rounded-xl bg-gray-100 border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                          placeholder="Email Address"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-gray-700 font-semibold mb-1">Message</label>
+                        <textarea
+                          className="w-full px-4 py-3 rounded-xl bg-gray-100 border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                          placeholder="Type your message here..."
+                          rows={4}
+                          required
+                        />
+                      </div>
+                      <button
+                        type="submit"
+                        className="btn w-full px-5 py-3 text-lg"
+                      >
+                        Send Message
+                      </button>
+                    </form>
+                  </motion.div>
+
         {error && (
           <div className="mb-8 text-center text-red-600 font-medium bg-red-100 p-5 rounded-2xl border border-red-300 animate-fade-in">{error}</div>
         )}
