@@ -11,6 +11,7 @@ import Contact from './pages/Contact.jsx';
 import Payments from './pages/Payments.jsx';
 import AdminLogin from './pages/AdminLogin.jsx';
 import AdminDashboard from './pages/AdminDashboard.jsx';
+import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 import TawkToChat from './components/TawkToChat.jsx'; // <-- add this
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -36,3 +37,17 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </React.StrictMode>
 )
+
+function App() {
+  return (
+    <div className="App">
+      <TawkMessengerReact
+        propertyId="68a924307d18e21931dd2518"
+        widgetId="1j3abao74"
+      />
+      {/* ...rest of your app... */}
+    </div>
+  );
+}
+
+export default App;
