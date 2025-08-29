@@ -474,7 +474,7 @@ export default function Home() {
 
         {/* Navigation Links */}
         <div className="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-4">
-          <a href="./About.jsx" className="text-slate-300 hover:text-white transition-colors duration-300">
+          <a href="/about" className="text-slate-300 hover:text-white transition-colors duration-300">
             About
           </a>
           <a href="./Services.jsx" className="text-slate-300 hover:text-white transition-colors duration-300">
@@ -493,25 +493,24 @@ export default function Home() {
         
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-end">
-          <button
-            onClick={() => console.log('Get a Quote button clicked!')}
-            className="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300"
-          >
-            Get a Quote
-          </button>
-          <button
-            to = " /Contact.jsx"
-            onClick={() => console.log('Learn More button clicked!')}
-            className="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300"
-          >
-            Learn More
-          </button>
+          <Link
+              to="/contact" // You can create a quote page or a contact page route
+              className="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300"
+            >
+              Get a Quote
+            </Link>
+          <Link
+  to="/contact" // Assuming you want to link to the contact page
+  className="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300"
+>
+  Learn More
+</Link>
         </div>
       </div>
 
       {/* Copyright Notice */}
       <div className="mt-8 pt-6 border-t border-slate-700 text-center text-slate-500 text-sm">
-        &copy; 2013 YourBrand. All Rights Reserved.
+        &copy; 2016 YourBrand. All Rights Reserved.
       </div>
     </footer>
     </div>

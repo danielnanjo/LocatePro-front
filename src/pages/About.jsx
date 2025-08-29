@@ -89,7 +89,7 @@ export default function About() {
             >
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Story</h2>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                    Founded in 2022, LocatePro has empowered thousands of companies to optimize supply chains and deliver with confidence. We combine cutting-edge technology, 3D interfaces, and world-class support to deliver a premium logistics experience.
+                    Founded in 2016, LocatePro has empowered thousands of companies to optimize supply chains and deliver with confidence. We combine cutting-edge technology, 3D interfaces, and world-class support to deliver a premium logistics experience.
                 </p>
                 <div className="relative w-full h-48 rounded-lg overflow-hidden shadow-lg border border-gray-200">
                     <img
